@@ -1,16 +1,48 @@
-# React + Vite
+# 📸 PIX Cabina Fotográfica
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Aplicación web moderna y responsiva para **PIX Cabina Fotográfica** (Tulancingo de Bravo, Hidalgo y alrededores). Permite a los clientes explorar paquetes de cabinas de fotos para bodas, XV años, graduaciones y eventos sociales, cotizar con calculadora en tiempo real, simular tiras fotográficas interactivas y contactar vía WhatsApp.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ✨ Características
 
-## React Compiler
+- **Simulador Interactivo de Tiras Fotográficas:** Vista previa personalizable con selección de fotos, marcos y tipografía.
+- **Cotizador & Calculadora de Presupuesto:** Cálculo dinámico según paquete base, horas de servicio y complementos (álbum de firmas, letrero neón, alfombra VIP).
+- **Catálogo de Paquetes y Cobertura:** Detalle de servicios, zonas de atención y preguntas frecuentes.
+- **Integración con WhatsApp:** Envío de cotizaciones personalizadas pre-llenadas directamente al chat.
+- **Diseño Moderno & Ultra Rápido:** Construido con React, Tailwind CSS, Lucide Icons y animaciones fluidas con Canvas Confetti.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the Oxlint configuration
+## 🛠️ Tecnologías
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+- **React 19**
+- **Vite 8**
+- **Tailwind CSS**
+- **Lucide React**
+- **Canvas Confetti**
+
+---
+
+## 🚀 Instalación y Desarrollo Local
+
+1. Clonar el repositorio:
+   ```bash
+   git clone https://github.com/alonsocm/pix-photobooth.git
+   cd pix-photobooth
+   ```
+
+2. Instalar dependencias:
+   ```bash
+   npm install
+   ```
+
+3. Iniciar el servidor de desarrollo:
+   ```bash
+   npm run dev
+   ```
+
+4. Compilar para producción:
+   ```bash
+   npm run build
+   ```
