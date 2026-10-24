@@ -1,0 +1,12 @@
+# Service-worker updates must not be cached as the SPA shell.
+/sw.js
+  Cache-Control: no-cache, no-store, must-revalidate
+  Content-Type: text/javascript; charset=utf-8
+
+/service-worker.js
+  Cache-Control: no-cache, no-store, must-revalidate
+  Content-Type: text/javascript; charset=utf-8
+
+/ngsw-worker.js
+  Cache-Control: no-cache, no-store, must-revalidate
+  Content-Type: text/javascript; charset=utf-8
