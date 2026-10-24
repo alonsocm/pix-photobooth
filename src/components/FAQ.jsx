@@ -57,11 +57,12 @@ export default function FAQ() {
                   </div>
                 </button>
 
-                {isOpen && (
-                  <div className="px-6 pb-6 text-sm sm:text-base text-slate-300 leading-relaxed border-t border-white/5 pt-4">
-                    {faq.answer}
-                  </div>
-                )}
+                <div
+                  hidden={!isOpen}
+                  className="px-6 pb-6 text-sm sm:text-base text-slate-300 leading-relaxed border-t border-white/5 pt-4"
+                >
+                  {faq.answer}
+                </div>
               </div>
             );
           })}

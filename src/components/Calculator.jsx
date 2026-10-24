@@ -84,6 +84,7 @@ export default function Calculator() {
       approxDate ? '¿Tienen disponible esta fecha?' : '¿Tienen disponibilidad?'
     );
 
+    if (typeof window === 'undefined') return
     window.open(
       `https://wa.me/52${BUSINESS_INFO.phone}?text=${encodeURIComponent(lines.join('\n'))}`,
       '_blank'
