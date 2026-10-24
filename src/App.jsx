@@ -6,7 +6,7 @@ import StripSimulator from './components/StripSimulator';
 import Packages from './components/Packages';
 import Calculator from './components/Calculator';
 import Gallery from './components/Gallery';
-import Reviews from './components/Reviews';
+import EventPhotos from './components/EventPhotos';
 import Coverage from './components/Coverage';
 import FAQ from './components/FAQ';
 import WhatsAppFloating from './components/WhatsAppFloating';
@@ -26,7 +26,7 @@ export default function App() {
         <Packages />
         <Calculator />
         <Gallery />
-        <Reviews />
+        <EventPhotos />
         <Coverage />
         <FAQ />
       </main>

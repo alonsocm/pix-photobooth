@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Sparkles, MessageCircle, ArrowRight, Camera, Star, Glasses, Flame, CheckCircle, ShieldCheck, Image as ImageIcon } from 'lucide-react';
+import { Sparkles, MessageCircle, ArrowRight, Camera, Star, Glasses, Flame, CheckCircle } from 'lucide-react';
 import { BUSINESS_INFO } from '../data/content';
 
 export default function Hero() {
@@ -7,7 +7,7 @@ export default function Hero() {
     {
       src: "/images/cabina-inflable.jpg",
       tag: "Montaje Real en Tulancingo",
-      badge: "Luces LED & Alfombra VIP",
+      badge: "Luz LED",
       label: "Exterior"
     },
     {
@@ -216,17 +216,6 @@ export default function Hero() {
                   </div>
                 </div>
 
-              </div>
-
-              {/* Floating Stat Badge (Top Right) */}
-              <div className="absolute -top-5 -right-2 sm:-right-5 z-20 glass-card p-3 rounded-2xl border border-pix-pink/50 shadow-neon-pink flex items-center gap-3 animate-float">
-                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-pix-pink to-pix-purple flex items-center justify-center text-white font-black text-sm flex-shrink-0 shadow-sm">
-                  ⭐ 5.0
-                </div>
-                <div className="pr-1">
-                  <p className="text-xs font-bold text-white leading-tight">Los Favoritos de Hidalgo</p>
-                  <p className="text-[11px] text-pix-cyan font-medium leading-tight mt-0.5">Diversión 100% garantizada</p>
-                </div>
               </div>
 
             </div>

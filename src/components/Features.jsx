@@ -5,8 +5,8 @@ export default function Features() {
   const features = [
     {
       icon: <Camera className="w-6 h-6 text-pix-pink" />,
-      title: "Impresión Térmica Instantánea",
-      description: "Fotos impresas en segundos con papel fotográfico profesional de secado inmediato y alta durabilidad.",
+      title: "Impresión al instante",
+      description: "Fotos impresas ilimitadas durante el servicio: 2 tiras por toma, en papel fotográfico de secado inmediato.",
       border: "hover:border-pix-pink/50",
       glow: "group-hover:shadow-neon-pink"
     },
@@ -33,15 +33,15 @@ export default function Features() {
     },
     {
       icon: <QrCode className="w-6 h-6 text-amber-400" />,
-      title: "Galería Digital vía Código QR",
-      description: "Tus invitados pueden descargar sus fotos digitales al momento para compartirlas en Instagram y TikTok.",
+      title: "Descarga digital por QR",
+      description: "Tus invitados descargan sus fotos con un código QR. Al final te llevas un USB de regalo con todas las fotos del evento.",
       border: "hover:border-amber-400/50",
       glow: "group-hover:shadow-neon-pink"
     },
     {
       icon: <Users className="w-6 h-6 text-blue-400" />,
-      title: "Operador Durante Todo el Evento",
-      description: "Personal calificado y amable que asiste a tus invitados y asegura que las filas fluyan sin interrupciones.",
+      title: "2 operadores durante el evento",
+      description: "Dos personas del equipo atienden a tus invitados durante todo el servicio.",
       border: "hover:border-blue-400/50",
       glow: "group-hover:shadow-neon-cyan"
     }

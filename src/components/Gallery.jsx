@@ -1,63 +1,13 @@
 import React, { useState } from 'react';
-import { Sparkles, Camera, Image as ImageIcon, ExternalLink, Heart } from 'lucide-react';
+import { Camera } from 'lucide-react';
+import { GALLERY_ITEMS } from '../data/content';
 
 export default function Gallery() {
   const [activeFilter, setActiveFilter] = useState('all');
 
-  const galleryItems = [
-    {
-      id: 1,
-      category: 'booth',
-      title: 'Montaje en Jardín de Eventos',
-      subtitle: 'Cabina inflable iluminada con luces LED y alfombra VIP en Tulancingo',
-      src: '/images/cabina-inflable.jpg',
-      badge: 'Montaje Real'
-    },
-    {
-      id: 2,
-      category: 'events',
-      title: 'Bodas Inolvidables con Props',
-      subtitle: 'Novios y familia divirtiéndose con sombreros, lentes gigantes y accesorios temáticos',
-      src: '/images/evento-boda-novios-props.jpg',
-      badge: 'Boda Real'
-    },
-    {
-      id: 3,
-      category: 'strips',
-      title: 'Tiras de Fotos Impresas al Instante',
-      subtitle: 'Invitadas felices mostrando sus tiras personalizadas y la pantalla interactiva',
-      src: '/images/evento-chicas-tiras.jpg',
-      badge: 'XV Años & Fiesta'
-    },
-    {
-      id: 4,
-      category: 'booth',
-      title: 'Interior Iluminado con Luces LED',
-      subtitle: 'Espacio amplio con mesa de accesorios, lentes y pantalla touch interactiva',
-      src: '/images/evento-cabina-interior-led.jpg',
-      badge: 'Interior LED'
-    },
-    {
-      id: 5,
-      category: 'events',
-      title: 'Diversión con Máscaras y Sombreros',
-      subtitle: 'Los accesorios más divertidos para que todos tus invitados posen',
-      src: '/images/evento-props-vaquero.jpg',
-      badge: 'Accesorios & Props'
-    },
-    {
-      id: 6,
-      category: 'strips',
-      title: 'Recuerdos para Cada Invitado',
-      subtitle: 'Tiras dobles con diseño exclusivo a juego con la invitación del evento',
-      src: '/images/evento-invitados-tiras.jpg',
-      badge: 'Tiras Impresas'
-    }
-  ];
-
-  const filteredItems = activeFilter === 'all' 
-    ? galleryItems 
-    : galleryItems.filter(item => item.category === activeFilter);
+  const filteredItems = activeFilter === 'all'
+    ? GALLERY_ITEMS
+    : GALLERY_ITEMS.filter((item) => item.category === activeFilter);
 
   return (
     <section id="galeria" className="py-20 md:py-28 relative bg-pix-dark overflow-hidden">
