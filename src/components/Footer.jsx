@@ -1,6 +1,12 @@
 import React from 'react';
-import { Camera, Heart, MapPin, Phone, MessageCircle, Sparkles, Share2, Globe } from 'lucide-react';
+import { Heart, MapPin, Phone, MessageCircle, Sparkles } from 'lucide-react';
 import { BUSINESS_INFO } from '../data/content';
+
+const SOCIAL_LINKS = [
+  { name: 'Instagram', href: BUSINESS_INFO.socials.instagram },
+  { name: 'Facebook', href: BUSINESS_INFO.socials.facebook },
+  { name: 'TikTok', href: BUSINESS_INFO.socials.tiktok },
+];
 
 export default function Footer() {
   return (
@@ -106,6 +112,24 @@ export default function Footer() {
                 Lunes a Domingo (9:00 AM - 10:00 PM)
               </span>
             </div>
+
+            <div className="pt-2">
+              <span className="text-xs text-slate-400 block mb-2 font-mono">Síguenos</span>
+              <div className="flex flex-col gap-2">
+                {SOCIAL_LINKS.map((social) => (
+                  <a
+                    key={social.name}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-between gap-3 rounded-xl border border-white/15 bg-white/5 px-3 py-2 text-sm font-bold text-white hover:border-pix-pink/50 hover:text-pix-pink transition-colors"
+                  >
+                    <span>{social.name}</span>
+                    <span className="text-[10px] font-mono text-slate-400">Abrir</span>
+                  </a>
+                ))}
+              </div>
+            </div>
           </div>
 
         </div>
@@ -113,10 +137,24 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
           <p>© {new Date().getFullYear()} PIX Cabina Fotográfica. Todos los derechos reservados. Tulancingo, Hidalgo.</p>
-          <div className="flex items-center gap-1 text-slate-400">
-            <span>Hecho con</span>
-            <Heart className="w-3.5 h-3.5 text-pix-pink fill-pix-pink" />
-            <span>para eventos inolvidables</span>
+          <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2">
+            {SOCIAL_LINKS.map((social) => (
+              <a
+                key={social.name}
+                href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-slate-200 hover:text-pix-pink transition-colors"
+              >
+                {social.name}
+              </a>
+            ))}
+            <span className="hidden sm:inline text-white/20" aria-hidden="true">|</span>
+            <div className="flex items-center gap-1 text-slate-400">
+              <span>Hecho con</span>
+              <Heart className="w-3.5 h-3.5 text-pix-pink fill-pix-pink" />
+              <span>para eventos inolvidables</span>
+            </div>
           </div>
         </div>
 

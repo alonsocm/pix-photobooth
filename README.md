@@ -7,7 +7,7 @@ Aplicación web moderna y responsiva para **PIX Cabina Fotográfica** (Tulancing
 ## ✨ Características
 
 - **Simulador Interactivo de Tiras Fotográficas:** Vista previa personalizable con selección de fotos, marcos y tipografía.
-- **Cotizador & Calculadora de Presupuesto:** Cálculo dinámico según paquete base, horas de servicio y complementos (álbum de firmas, letrero neón, alfombra VIP).
+- **Cotizador & Calculadora de Presupuesto:** Cálculo según paquete (2 o 3 horas) y hora adicional. En Tulancingo y Santiago Tulantepec el traslado va incluido; en otros municipios se confirma por WhatsApp.
 - **Catálogo de Paquetes y Cobertura:** Detalle de servicios, zonas de atención y preguntas frecuentes.
 - **Integración con WhatsApp:** Envío de cotizaciones personalizadas pre-llenadas directamente al chat.
 - **Diseño Moderno & Ultra Rápido:** Construido con React, Tailwind CSS, Lucide Icons y animaciones fluidas con Canvas Confetti.

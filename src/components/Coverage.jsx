@@ -16,7 +16,7 @@ export default function Coverage() {
             <div className="lg:col-span-7 space-y-6">
               <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-pix-cyan/15 border border-pix-cyan/40 text-xs font-bold text-pix-cyan">
                 <MapPin className="w-4 h-4" />
-                <span>Cobertura en Todo Hidalgo</span>
+                <span>Cobertura en Hidalgo</span>
               </div>
 
               <h2 className="text-3xl sm:text-4xl font-extrabold font-display text-white">
