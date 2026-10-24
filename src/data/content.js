@@ -22,9 +22,9 @@ export const BUSINESS_INFO = {
   location: "Tulancingo de Bravo, Hidalgo",
   coverage: ZONES.map((zone) => zone.name),
   socials: {
-    instagram: "https://www.instagram.com/pix_cabinas",
-    facebook: "https://www.facebook.com/PixCabinasTulancingo",
-    tiktok: "https://www.tiktok.com/@somospix",
+    instagram: "https://www.instagram.com/somospixmx",
+    facebook: "https://www.facebook.com/somospixmx",
+    tiktok: "https://www.tiktok.com/@somospixmx",
   },
 };
 
