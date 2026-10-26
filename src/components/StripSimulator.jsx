@@ -183,6 +183,7 @@ export default function StripSimulator() {
               <div className="pt-2">
                 <a
                   href={`https://wa.me/52${BUSINESS_INFO.phone}?text=${getWhatsappMessage()}`}
+                  data-ubicacion="simulador"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full flex items-center justify-center gap-3 py-4 px-6 rounded-2xl bg-gradient-to-r from-pix-pink via-pix-purple to-pix-cyan text-white font-extrabold text-base shadow-neon-pink hover:scale-[1.02] transition-transform"

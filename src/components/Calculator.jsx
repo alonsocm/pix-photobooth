@@ -52,43 +52,35 @@ export default function Calculator() {
   const serviceTotal = basePrice + addonsPrice;
   const totalLabel = quoteTotalLabel(serviceTotal, travelIncluded);
 
+  const eventObj = EVENT_TYPES.find((event) => event.id === eventType);
+  const extrasLabel = selectedAddons
+    .map((id) => ADDONS.find((addon) => addon.id === id)?.name)
+    .filter(Boolean)
+    .join(', ');
+  const quoteLines = [
+    '¡Hola PIX Cabina Fotográfica! Me gustaría consultar disponibilidad para mi evento:',
+    '',
+    `🎉 *Tipo de evento:* ${eventObj ? eventObj.name : eventType}`,
+  ];
+  if (approxDate) {
+    quoteLines.push(`📅 *Fecha:* ${formatEventDate(approxDate)}`);
+  }
+  quoteLines.push(
+    `⏱️ *Horas:* ${selectedPackage.hours} horas (${selectedPackage.name})`,
+    `📍 *Municipio:* ${selectedZone.name}`,
+    `✨ *Extras:* ${extrasLabel || 'Ninguno'}`,
+    `💰 *Total:* ${totalLabel}`,
+    '',
+    approxDate ? '¿Tienen disponible esta fecha?' : '¿Tienen disponibilidad?'
+  );
+  const whatsappHref = `https://wa.me/52${BUSINESS_INFO.phone}?text=${encodeURIComponent(quoteLines.join('\n'))}`;
+
   const handleWhatsappBooking = () => {
     confetti({
       particleCount: 50,
       spread: 70,
       origin: { y: 0.6 },
     });
-
-    const eventObj = EVENT_TYPES.find((event) => event.id === eventType);
-    const extrasLabel = selectedAddons
-      .map((id) => ADDONS.find((addon) => addon.id === id)?.name)
-      .filter(Boolean)
-      .join(', ');
-
-    const lines = [
-      '¡Hola PIX Cabina Fotográfica! Me gustaría consultar disponibilidad para mi evento:',
-      '',
-      `🎉 *Tipo de evento:* ${eventObj ? eventObj.name : eventType}`,
-    ];
-
-    if (approxDate) {
-      lines.push(`📅 *Fecha:* ${formatEventDate(approxDate)}`);
-    }
-
-    lines.push(
-      `⏱️ *Horas:* ${selectedPackage.hours} horas (${selectedPackage.name})`,
-      `📍 *Municipio:* ${selectedZone.name}`,
-      `✨ *Extras:* ${extrasLabel || 'Ninguno'}`,
-      `💰 *Total:* ${totalLabel}`,
-      '',
-      approxDate ? '¿Tienen disponible esta fecha?' : '¿Tienen disponibilidad?'
-    );
-
-    if (typeof window === 'undefined') return
-    window.open(
-      `https://wa.me/52${BUSINESS_INFO.phone}?text=${encodeURIComponent(lines.join('\n'))}`,
-      '_blank'
-    );
   };
 
   return (
@@ -315,14 +307,17 @@ export default function Calculator() {
                 ))}
               </div>
 
-              <button
-                type="button"
+              <a
+                href={whatsappHref}
+                data-ubicacion="cotizador"
+                target="_blank"
+                rel="noopener noreferrer"
                 onClick={handleWhatsappBooking}
                 className="w-full flex items-center justify-center gap-3 py-4 px-6 rounded-2xl bg-gradient-to-r from-pix-pink via-pix-purple to-pix-cyan text-white font-extrabold text-base shadow-neon-pink hover:scale-[1.03] transition-all"
               >
                 <MessageCircle className="w-5 h-5" />
                 <span>Apartar fecha por WhatsApp</span>
-              </button>
+              </a>
 
               <div className="flex items-center gap-2 text-[11px] text-slate-400 justify-center">
                 <AlertCircle className="w-3.5 h-3.5 text-pix-pink" />

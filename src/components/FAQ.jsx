@@ -76,6 +76,7 @@ export default function FAQ() {
           </p>
           <a
             href={`https://wa.me/52${BUSINESS_INFO.phone}?text=${encodeURIComponent('¡Hola PIX! Tengo una duda sobre el servicio de cabina de fotos en Tulancingo.')}`}
+            data-ubicacion="faq"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-pix-pink to-pix-purple text-white text-sm font-bold shadow-neon-pink hover:scale-105 transition-all"

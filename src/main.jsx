@@ -26,6 +26,33 @@ async function dropStaleServiceWorkers() {
 
 dropStaleServiceWorkers()
 
+function ubicacionFor(link) {
+  const explicit = link.getAttribute('data-ubicacion')
+  if (explicit) return explicit
+  const section = link.closest('section[id]')
+  if (section?.id) return section.id
+  if (link.closest('footer')) return 'footer'
+  if (link.closest('header')) return 'navbar'
+  if (link.closest('aside')) return 'boton-flotante'
+  return 'sitio'
+}
+
+document.addEventListener('click', (event) => {
+  const target = event.target
+  if (!(target instanceof Element)) return
+  const link = target.closest('a[href]')
+  if (!link) return
+  const href = link.getAttribute('href') || ''
+  const isWhatsapp = /wa\.me|api\.whatsapp\.com|whatsapp\.com/i.test(href)
+  const isTel = href.toLowerCase().startsWith('tel:')
+  if (!isWhatsapp && !isTel) return
+  if (typeof window.gtag !== 'function') return
+  window.gtag('event', isTel ? 'contacto_telefono' : 'contacto_whatsapp', {
+    ubicacion: ubicacionFor(link),
+    link_url: link.href,
+  })
+})
+
 const root = document.getElementById('root')
 const app = (
   <StrictMode>
