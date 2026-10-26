@@ -56,7 +56,7 @@ document.addEventListener('click', (event) => {
 const root = document.getElementById('root')
 const app = (
   <StrictMode>
-    <App />
+    <App path={window.location.pathname} />
   </StrictMode>
 )
 

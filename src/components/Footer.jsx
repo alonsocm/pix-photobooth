@@ -1,6 +1,7 @@
 import React from 'react';
 import { Heart, MapPin, Phone, MessageCircle, Sparkles } from 'lucide-react';
 import { BUSINESS_INFO } from '../data/content';
+import { LANDINGS, normalizePath } from '../data/landings';
 
 const SOCIAL_LINKS = [
   { name: 'Instagram', href: BUSINESS_INFO.socials.instagram },
@@ -8,7 +9,12 @@ const SOCIAL_LINKS = [
   { name: 'TikTok', href: BUSINESS_INFO.socials.tiktok },
 ];
 
-export default function Footer() {
+export default function Footer({ path = '/' }) {
+  const onHome = normalizePath(path) === '/';
+  const sectionHref = (hash) => (onHome ? hash : `/${hash}`);
+  const eventPages = LANDINGS.filter((page) => page.group === 'eventos');
+  const zonePages = LANDINGS.filter((page) => page.group === 'zonas');
+
   return (
     <footer className="bg-pix-dark border-t border-white/10 pt-16 pb-12 relative overflow-hidden">
       {/* Glow */}
@@ -40,22 +46,22 @@ export default function Footer() {
             <h4 className="text-sm font-bold text-white uppercase tracking-wider font-mono">Navegación</h4>
             <ul className="space-y-2 text-xs sm:text-sm text-slate-400">
               <li>
-                <a href="#beneficios" className="hover:text-pix-pink transition-colors">¿Por qué PIX?</a>
+                <a href={sectionHref('#beneficios')} className="hover:text-pix-pink transition-colors">¿Por qué PIX?</a>
               </li>
               <li>
-                <a href="#simulador" className="hover:text-pix-cyan transition-colors">Simulador de Tiras</a>
+                <a href={sectionHref('#simulador')} className="hover:text-pix-cyan transition-colors">Simulador de Tiras</a>
               </li>
               <li>
-                <a href="#paquetes" className="hover:text-pix-violet transition-colors">Paquetes & Precios</a>
+                <a href={sectionHref('#paquetes')} className="hover:text-pix-violet transition-colors">Paquetes & Precios</a>
               </li>
               <li>
-                <a href="#cotizador" className="hover:text-pix-green transition-colors">Cotizador en Línea</a>
+                <a href={sectionHref('#cotizador')} className="hover:text-pix-green transition-colors">Cotizador en Línea</a>
               </li>
               <li>
-                <a href="#galeria" className="hover:text-pix-pink transition-colors">Galería de Fotos</a>
+                <a href={sectionHref('#galeria')} className="hover:text-pix-pink transition-colors">Galería de Fotos</a>
               </li>
               <li>
-                <a href="#faq" className="hover:text-pix-cyan transition-colors">Preguntas Frecuentes</a>
+                <a href={sectionHref('#faq')} className="hover:text-pix-cyan transition-colors">Preguntas Frecuentes</a>
               </li>
             </ul>
           </div>
@@ -138,6 +144,29 @@ export default function Footer() {
             </div>
           </div>
 
+        </div>
+
+        <div className="grid sm:grid-cols-2 gap-8 mb-12">
+          <div className="space-y-3">
+            <h4 className="text-sm font-bold text-white uppercase tracking-wider font-mono">Eventos</h4>
+            <ul className="space-y-2 text-xs sm:text-sm text-slate-400">
+              {eventPages.map((page) => (
+                <li key={page.path}>
+                  <a href={page.path} className="hover:text-pix-pink transition-colors">{page.navLabel}</a>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="space-y-3">
+            <h4 className="text-sm font-bold text-white uppercase tracking-wider font-mono">Zonas</h4>
+            <ul className="space-y-2 text-xs sm:text-sm text-slate-400">
+              {zonePages.map((page) => (
+                <li key={page.path}>
+                  <a href={page.path} className="hover:text-pix-pink transition-colors">{page.navLabel}</a>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
 
         {/* Bottom Bar */}

@@ -1,17 +1,20 @@
 import React, { useState } from 'react';
 import { Camera, Sparkles, Menu, X, MessageCircle, Phone } from 'lucide-react';
 import { BUSINESS_INFO } from '../data/content';
+import { normalizePath } from '../data/landings';
 
-export default function Navbar() {
+export default function Navbar({ path = '/' }) {
   const [isOpen, setIsOpen] = useState(false);
+  const onHome = normalizePath(path) === '/';
+  const sectionHref = (hash) => (onHome ? hash : `/${hash}`);
 
   const navLinks = [
-    { name: 'Beneficios', href: '#beneficios' },
-    { name: 'Simulador de Tira', href: '#simulador' },
-    { name: 'Paquetes', href: '#paquetes' },
-    { name: 'Cotizador', href: '#cotizador' },
-    { name: 'Galería', href: '#galeria' },
-    { name: 'Preguntas', href: '#faq' },
+    { name: 'Beneficios', href: sectionHref('#beneficios') },
+    { name: 'Simulador de Tira', href: sectionHref('#simulador') },
+    { name: 'Paquetes', href: sectionHref('#paquetes') },
+    { name: 'Cotizador', href: sectionHref('#cotizador') },
+    { name: 'Galería', href: sectionHref('#galeria') },
+    { name: 'Preguntas', href: sectionHref('#faq') },
   ];
 
   return (
@@ -20,7 +23,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-20">
           
           {/* Brand Logo */}
-          <a href="#" className="flex items-center gap-3 group">
+          <a href={onHome ? '#' : '/'} className="flex items-center gap-3 group">
             <div className="relative">
               <img 
                 src="/images/logo-pix.png" 
