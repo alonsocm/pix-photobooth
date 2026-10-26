@@ -6,6 +6,7 @@ import {
   ADDONS,
   PACKAGES,
   QUOTER_ZONES,
+  NEARBY_PLACE_NOTE,
   SHARED_INCLUSIONS,
   formatMxn,
   travelStatusLabel,
@@ -179,6 +180,7 @@ export default function Calculator() {
                     ))}
                   </select>
                   <p className="text-[11px] text-pix-cyan mt-1.5">{travelStatusLabel(travelIncluded)}</p>
+                  <p className="text-[11px] text-slate-400 leading-relaxed mt-2">{NEARBY_PLACE_NOTE}</p>
                 </div>
 
                 <div>
@@ -255,7 +257,7 @@ export default function Calculator() {
                   <h3 className="text-lg font-bold text-white">Resumen de cotización</h3>
                 </div>
                 <span className="text-xs font-mono bg-white/10 px-2.5 py-1 rounded-full text-slate-300">
-                  PIX Hidalgo
+                  PIX Tulancingo
                 </span>
               </div>
 

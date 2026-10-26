@@ -23,7 +23,7 @@ export default function FAQ() {
             Preguntas <span className="text-transparent bg-clip-text bg-gradient-to-r from-pix-pink to-pix-cyan">Frecuentes</span>
           </h2>
           <p className="text-slate-300 text-base sm:text-lg">
-            Todo lo que necesitas saber antes de rentar tu cabina fotográfica PIX en Hidalgo.
+            Todo lo que necesitas saber antes de rentar tu cabina fotográfica PIX en Tulancingo, Santiago Tulantepec, Acatlán, Cuautepec y alrededores.
           </p>
         </div>
 

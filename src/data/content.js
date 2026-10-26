@@ -1,11 +1,15 @@
 export const ZONES = [
   { name: "Tulancingo de Bravo", travelIncluded: true },
   { name: "Santiago Tulantepec", travelIncluded: true },
-  { name: "Cuautepec de Hinojosa", travelIncluded: false },
   { name: "Acatlán", travelIncluded: false },
-  { name: "Singuilucan", travelIncluded: false },
-  { name: "Pachuca y alrededores", travelIncluded: false },
+  { name: "Cuautepec de Hinojosa", travelIncluded: false },
 ];
+
+export const SERVICE_AREA =
+  "Tulancingo, Santiago Tulantepec, Acatlán, Cuautepec y alrededores";
+
+export const NEARBY_PLACE_NOTE =
+  "¿Tu evento es en otro lugar cercano, como Singuilucan, Metepec o Agua Blanca? Escríbenos y revisamos disponibilidad y costo de traslado.";
 
 export const QUOTER_ZONES = [
   ...ZONES,

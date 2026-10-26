@@ -53,7 +53,7 @@ export default function StripSimulator() {
 🎨 *Estilo:* ${themes.find(t => t.id === theme)?.name || theme}
 🖼️ *Filtro:* ${filterStyle === 'bw' ? 'Blanco y Negro Glam' : filterStyle === 'warm' ? 'Cálido Vintage' : 'Color Natural'}
 
-¿Tienen disponible fecha para mi evento en Tulancingo / Hidalgo?`;
+¿Tienen disponible fecha para mi evento en Tulancingo, Santiago Tulantepec, Acatlán, Cuautepec o alrededores?`;
     return encodeURIComponent(text);
   };
 
@@ -192,7 +192,7 @@ export default function StripSimulator() {
                   className="w-full flex items-center justify-center gap-3 py-4 px-6 rounded-2xl bg-gradient-to-r from-pix-pink via-pix-purple to-pix-cyan text-white font-extrabold text-base shadow-neon-pink hover:scale-[1.02] transition-transform"
                 >
                   <MessageCircle className="w-5 h-5 text-white" />
-                  <span>¡Quiero este diseño para mi evento en Hidalgo!</span>
+                  <span>¡Quiero este diseño para mi evento en Tulancingo y alrededores!</span>
                 </a>
                 <p className="text-center text-xs text-slate-400 mt-2">
                   Te respondemos al instante con la disponibilidad de tu fecha

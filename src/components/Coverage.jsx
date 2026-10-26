@@ -1,6 +1,6 @@
 import React from 'react';
 import { MapPin, Navigation, Clock, ShieldCheck, Truck } from 'lucide-react';
-import { BUSINESS_INFO } from '../data/content';
+import { BUSINESS_INFO, NEARBY_PLACE_NOTE } from '../data/content';
 
 export default function Coverage() {
   return (
@@ -16,11 +16,11 @@ export default function Coverage() {
             <div className="lg:col-span-7 space-y-6">
               <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-pix-cyan/15 border border-pix-cyan/40 text-xs font-bold text-pix-cyan">
                 <MapPin className="w-4 h-4" />
-                <span>Cobertura en Hidalgo</span>
+                <span>Tulancingo y alrededores</span>
               </div>
 
               <h2 className="text-3xl sm:text-4xl font-extrabold font-display text-white">
-                Llevamos la Fiesta a <span className="text-pix-cyan">Tulancingo</span> y Municipios Cercanos
+                Llevamos la Fiesta a <span className="text-pix-cyan">Tulancingo, Santiago Tulantepec, Acatlán, Cuautepec y alrededores</span>
               </h2>
 
               <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
@@ -39,6 +39,7 @@ export default function Coverage() {
                   </span>
                 ))}
               </div>
+              <p className="text-sm text-slate-300 leading-relaxed">{NEARBY_PLACE_NOTE}</p>
             </div>
 
             {/* Right Card / Punctuality Guarantee */}

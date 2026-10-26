@@ -27,7 +27,7 @@ export default function Footer() {
               />
             </div>
             <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
-              Cabina fotográfica inflable con iluminación LED y fotos impresas al instante para bodas, XV años, graduaciones y eventos en Tulancingo, Hidalgo.
+              Cabina fotográfica inflable con iluminación LED y fotos impresas al instante para bodas, XV años, graduaciones y eventos en Tulancingo, Santiago Tulantepec, Acatlán, Cuautepec y alrededores.
             </p>
             <div className="pt-2 text-xs font-mono text-pix-pink flex items-center gap-1.5">
               <Sparkles className="w-3.5 h-3.5" />
@@ -62,7 +62,7 @@ export default function Footer() {
 
           {/* Col 3: Coverage */}
           <div className="space-y-3">
-            <h4 className="text-sm font-bold text-white uppercase tracking-wider font-mono">Cobertura Hidalgo</h4>
+            <h4 className="text-sm font-bold text-white uppercase tracking-wider font-mono">Cobertura</h4>
             <ul className="space-y-1.5 text-xs text-slate-400">
               {BUSINESS_INFO.coverage.map((city, idx) => (
                 <li key={idx} className="flex items-center gap-2">
@@ -70,6 +70,10 @@ export default function Footer() {
                   <span>{city}</span>
                 </li>
               ))}
+              <li className="flex items-center gap-2">
+                <MapPin className="w-3.5 h-3.5 text-pix-cyan flex-shrink-0" />
+                <span>y alrededores</span>
+              </li>
             </ul>
           </div>
 
