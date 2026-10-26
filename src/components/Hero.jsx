@@ -53,7 +53,7 @@ export default function Hero() {
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-pix-pink"></span>
               </span>
               <Sparkles className="w-4 h-4 text-pix-pink" />
-              <span>Renta de Cabina de Fotos en Tulancingo e Hidalgo</span>
+              <span>Renta de Cabina de Fotos en Tulancingo, Santiago Tulantepec, Acatlán, Cuautepec y alrededores</span>
             </div>
 
             {/* Main Headline */}
@@ -115,7 +115,7 @@ export default function Hero() {
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row items-center gap-4 pt-4 justify-center lg:justify-start">
               <a
-                href={`https://wa.me/52${BUSINESS_INFO.phone}?text=${encodeURIComponent('¡Hola PIX! Quiero cotizar la cabina de fotos para mi evento en Tulancingo/Hidalgo.')}`}
+                href={`https://wa.me/52${BUSINESS_INFO.phone}?text=${encodeURIComponent('¡Hola PIX! Quiero cotizar la cabina de fotos para mi evento en Tulancingo, Santiago Tulantepec, Acatlán, Cuautepec o alrededores.')}`}
                 data-ubicacion="hero"
                 target="_blank"
                 rel="noopener noreferrer"

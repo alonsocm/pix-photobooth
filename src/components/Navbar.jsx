@@ -29,7 +29,7 @@ export default function Navbar() {
               />
             </div>
             <div className="hidden sm:block">
-              <span className="text-xs tracking-widest text-pix-cyan font-mono uppercase block">Tulancingo & Alrededores</span>
+              <span className="text-xs tracking-widest text-pix-cyan font-mono uppercase block">Tulancingo y alrededores</span>
             </div>
           </a>
 
@@ -100,7 +100,7 @@ export default function Navbar() {
           ))}
           <div className="pt-4 border-t border-white/10">
             <a
-              href={`https://wa.me/52${BUSINESS_INFO.phone}?text=${encodeURIComponent('¡Hola PIX! Me interesa consultar disponibilidad para mi evento en Hidalgo.')}`}
+              href={`https://wa.me/52${BUSINESS_INFO.phone}?text=${encodeURIComponent('¡Hola PIX! Me interesa consultar disponibilidad para mi evento en Tulancingo, Santiago Tulantepec, Acatlán, Cuautepec o alrededores.')}`}
               data-ubicacion="navbar-movil"
               target="_blank"
               rel="noopener noreferrer"

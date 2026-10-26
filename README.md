@@ -1,6 +1,6 @@
 # 📸 PIX Cabina Fotográfica
 
-Aplicación web moderna y responsiva para **PIX Cabina Fotográfica** (Tulancingo de Bravo, Hidalgo y alrededores). Permite a los clientes explorar paquetes de cabinas de fotos para bodas, XV años, graduaciones y eventos sociales, cotizar con calculadora en tiempo real, simular tiras fotográficas interactivas y contactar vía WhatsApp.
+Aplicación web moderna y responsiva para **PIX Cabina Fotográfica** (Tulancingo, Santiago Tulantepec, Acatlán, Cuautepec y alrededores). Permite a los clientes explorar paquetes de cabinas de fotos para bodas, XV años, graduaciones y eventos sociales, cotizar con calculadora en tiempo real, simular tiras fotográficas interactivas y contactar vía WhatsApp.
 
 ---
 
