@@ -11,8 +11,13 @@ import Coverage from './components/Coverage';
 import FAQ from './components/FAQ';
 import WhatsAppFloating from './components/WhatsAppFloating';
 import Footer from './components/Footer';
+import LandingPage from './components/LandingPage';
+import { findLanding } from './data/landings';
 
-export default function App() {
+export default function App({ path = '/' }) {
+  const page = findLanding(path);
+  if (page) return <LandingPage page={page} />;
+
   return (
     <div className="min-h-screen bg-pix-dark text-slate-100 flex flex-col selection:bg-pix-pink selection:text-white">
       {/* Top sticky Navigation */}
