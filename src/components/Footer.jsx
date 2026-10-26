@@ -79,6 +79,7 @@ export default function Footer() {
             <div className="space-y-2.5 text-xs sm:text-sm">
               <a
                 href={`https://wa.me/52${BUSINESS_INFO.phone}`}
+                data-ubicacion="footer"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2.5 text-slate-300 hover:text-pix-green transition-colors"
@@ -94,6 +95,7 @@ export default function Footer() {
 
               <a
                 href={`tel:${BUSINESS_INFO.phone}`}
+                data-ubicacion="footer"
                 className="flex items-center gap-2.5 text-slate-300 hover:text-pix-cyan transition-colors"
               >
                 <div className="p-2 rounded-lg bg-pix-cyan/10 text-pix-cyan border border-pix-cyan/20">

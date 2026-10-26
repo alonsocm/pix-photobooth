@@ -116,6 +116,7 @@ export default function Hero() {
             <div className="flex flex-col sm:flex-row items-center gap-4 pt-4 justify-center lg:justify-start">
               <a
                 href={`https://wa.me/52${BUSINESS_INFO.phone}?text=${encodeURIComponent('¡Hola PIX! Quiero cotizar la cabina de fotos para mi evento en Tulancingo/Hidalgo.')}`}
+                data-ubicacion="hero"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-gradient-to-r from-pix-pink via-pix-purple to-pix-pink bg-size-200 hover:bg-right font-extrabold text-white text-base shadow-neon-pink hover:scale-105 transition-all duration-300"

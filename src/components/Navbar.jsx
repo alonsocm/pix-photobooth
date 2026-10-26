@@ -50,6 +50,7 @@ export default function Navbar() {
           <div className="hidden md:flex items-center gap-4">
             <a
               href={`https://wa.me/52${BUSINESS_INFO.phone}?text=${encodeURIComponent('¡Hola PIX! Me interesa pedir informes para mi evento.')}`}
+              data-ubicacion="navbar"
               target="_blank"
               rel="noopener noreferrer"
               className="relative inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-bold text-white rounded-full group bg-gradient-to-br from-pix-pink via-pix-purple to-pix-cyan group-hover:from-pix-pink group-hover:to-pix-cyan shadow-neon-pink hover:shadow-neon-cyan transition-all duration-300"
@@ -65,6 +66,7 @@ export default function Navbar() {
           <div className="flex lg:hidden items-center gap-2">
             <a
               href={`https://wa.me/52${BUSINESS_INFO.phone}`}
+              data-ubicacion="navbar-movil"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 rounded-lg bg-pix-pink/20 text-pix-pink border border-pix-pink/40"
@@ -99,6 +101,7 @@ export default function Navbar() {
           <div className="pt-4 border-t border-white/10">
             <a
               href={`https://wa.me/52${BUSINESS_INFO.phone}?text=${encodeURIComponent('¡Hola PIX! Me interesa consultar disponibilidad para mi evento en Hidalgo.')}`}
+              data-ubicacion="navbar-movil"
               target="_blank"
               rel="noopener noreferrer"
               className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-gradient-to-r from-pix-pink to-pix-purple text-white font-bold shadow-neon-pink"

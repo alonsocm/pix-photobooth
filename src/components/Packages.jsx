@@ -82,6 +82,7 @@ export default function Packages() {
 
                 <a
                   href={`https://wa.me/52${BUSINESS_INFO.phone}?text=${whatsappMsg}`}
+                  data-ubicacion={`paquete-${pkg.id}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className={`w-full py-4 px-6 rounded-2xl font-bold text-center flex items-center justify-center gap-2 transition-all ${
@@ -107,6 +108,7 @@ export default function Packages() {
           </div>
           <a
             href={`https://wa.me/52${BUSINESS_INFO.phone}?text=${encodeURIComponent('¡Hola PIX! Me gustaría cotizar un paquete personalizado para mi evento.')}`}
+            data-ubicacion="paquete-personalizado"
             target="_blank"
             rel="noopener noreferrer"
             className="px-5 py-2.5 rounded-xl bg-pix-cyan/20 hover:bg-pix-cyan/30 text-pix-cyan border border-pix-cyan/40 text-xs font-bold whitespace-nowrap transition-all"

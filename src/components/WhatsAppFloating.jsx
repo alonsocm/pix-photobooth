@@ -13,6 +13,7 @@ export default function WhatsAppFloating() {
       {/* Floating Button */}
       <a
         href={`https://wa.me/52${BUSINESS_INFO.phone}?text=${encodeURIComponent('¡Hola PIX! Me gustaría cotizar la cabina de fotos para mi evento.')}`}
+        data-ubicacion="boton-flotante"
         target="_blank"
         rel="noopener noreferrer"
         className="relative w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-gradient-to-tr from-green-500 to-emerald-400 flex items-center justify-center text-white shadow-lg shadow-green-500/40 hover:scale-110 active:scale-95 transition-all duration-300"
