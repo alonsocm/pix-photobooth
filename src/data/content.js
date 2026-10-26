@@ -9,7 +9,7 @@ export const SERVICE_AREA =
   "Tulancingo, Santiago Tulantepec, Acatlán, Cuautepec y alrededores";
 
 export const NEARBY_PLACE_NOTE =
-  "¿Tu evento es en otro lugar cercano, como Singuilucan, Metepec o Agua Blanca? Escríbenos y revisamos disponibilidad y costo de traslado.";
+  "¿Tu evento es en otro lugar cercano? Escríbenos y revisamos disponibilidad y costo de traslado.";
 
 export const QUOTER_ZONES = [
   ...ZONES,
