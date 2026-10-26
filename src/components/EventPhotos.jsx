@@ -23,7 +23,7 @@ export default function EventPhotos() {
           {EVENT_PHOTOS.map((item) => (
             <figure
               key={item.id}
-              className="relative overflow-hidden rounded-2xl border border-white/10 bg-slate-900 aspect-[4/5] sm:aspect-[4/3]"
+              className={`relative overflow-hidden rounded-2xl border border-white/10 bg-slate-900 ${item.frameClass || 'aspect-[4/5] sm:aspect-[4/3]'}`}
             >
               <img
                 src={item.src}
@@ -32,6 +32,7 @@ export default function EventPhotos() {
                 height={item.height}
                 loading="lazy"
                 className="h-full w-full object-cover"
+                style={item.objectPosition ? { objectPosition: item.objectPosition } : undefined}
               />
               <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-pix-dark via-pix-dark/80 to-transparent px-3 pb-3 pt-10 text-xs sm:text-sm font-semibold text-white">
                 {item.title}
