@@ -27,14 +27,14 @@ export default function Gallery() {
           </p>
         </div>
 
-        {/* Filter buttons */}
+        {/* Filter buttons. Hide a tab only when this list has no photos for it. */}
         <div className="flex flex-wrap items-center justify-center gap-2.5 mb-12">
           {[
             { id: 'all', label: 'Todos los Momentos' },
             { id: 'booth', label: 'Cabina Inflable & Montaje' },
             { id: 'strips', label: 'Tiras & Diseños' },
             { id: 'events', label: 'Invitados & Props' }
-          ].map((filter) => (
+          ].filter((filter) => filter.id === 'all' || GALLERY_ITEMS.some((item) => item.category === filter.id)).map((filter) => (
             <button
               key={filter.id}
               onClick={() => setActiveFilter(filter.id)}

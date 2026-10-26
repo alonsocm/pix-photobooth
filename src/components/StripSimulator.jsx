@@ -21,14 +21,17 @@ export default function StripSimulator() {
   const samplePhotos = [
     {
       src: "/images/evento-props-vaquero.jpg",
+      alt: "Invitados con sombreros y props posando en la cabina Pix",
       caption: "¡Posa con props!"
     },
     {
       src: "/images/evento-boda-novios-props.jpg",
+      alt: "Novios con props en una boda con la cabina Pix en Tulancingo",
       caption: "¡Novios y fiesta!"
     },
     {
       src: "/images/evento-chicas-tiras.jpg",
+      alt: "Invitadas mostrando sus tiras impresas en un evento en Tulancingo",
       caption: "¡Tiras al instante!"
     }
   ];
@@ -222,7 +225,7 @@ export default function StripSimulator() {
               <div className="mb-2.5 rounded-lg overflow-hidden border border-black/10 aspect-[4/3] bg-slate-800 relative group">
                 <img
                   src={samplePhotos[0].src}
-                  alt="Foto 1"
+                  alt={samplePhotos[0].alt}
                   className={`w-full h-full object-cover transition-all ${
                     filterStyle === 'bw' ? 'grayscale contrast-125' : filterStyle === 'warm' ? 'sepia-[0.3] brightness-105' : ''
                   }`}
@@ -234,7 +237,7 @@ export default function StripSimulator() {
               <div className="mb-2.5 rounded-lg overflow-hidden border border-black/10 aspect-[4/3] bg-slate-800 relative group">
                 <img
                   src={samplePhotos[1].src}
-                  alt="Foto 2"
+                  alt={samplePhotos[1].alt}
                   className={`w-full h-full object-cover transition-all ${
                     filterStyle === 'bw' ? 'grayscale contrast-125' : filterStyle === 'warm' ? 'sepia-[0.3] brightness-105' : ''
                   }`}
@@ -246,7 +249,7 @@ export default function StripSimulator() {
               <div className="mb-3 rounded-lg overflow-hidden border border-black/10 aspect-[4/3] bg-slate-800 relative group">
                 <img
                   src={samplePhotos[2].src}
-                  alt="Foto 3"
+                  alt={samplePhotos[2].alt}
                   className={`w-full h-full object-cover transition-all ${
                     filterStyle === 'bw' ? 'grayscale contrast-125' : filterStyle === 'warm' ? 'sepia-[0.3] brightness-105' : ''
                   }`}
