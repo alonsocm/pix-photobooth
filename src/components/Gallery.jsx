@@ -63,7 +63,8 @@ export default function Gallery() {
                   width={item.width}
                   height={item.height}
                   loading="lazy"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  className={`w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 ${item.objectPosition ? 'origin-top' : ''}`}
+                  style={item.objectPosition ? { objectPosition: item.objectPosition } : undefined}
                 />
               </div>
 

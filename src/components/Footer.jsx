@@ -94,7 +94,7 @@ export default function Footer() {
               </a>
 
               <a
-                href={`tel:${BUSINESS_INFO.phone}`}
+                href="tel:+527752054849"
                 data-ubicacion="footer"
                 className="flex items-center gap-2.5 text-slate-300 hover:text-pix-cyan transition-colors"
               >
@@ -103,7 +103,7 @@ export default function Footer() {
                 </div>
                 <div>
                   <div className="text-[10px] text-slate-400">Llamadas</div>
-                  <div className="font-bold">{BUSINESS_INFO.phoneFormatted}</div>
+                  <div className="font-bold">775 205 4849</div>
                 </div>
               </a>
             </div>
