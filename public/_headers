@@ -1,3 +1,7 @@
+# Browsers and Google expect the classic favicon media type.
+/favicon.ico
+  Content-Type: image/x-icon
+
 # Service-worker updates must not be cached as the SPA shell.
 /sw.js
   Cache-Control: no-cache, no-store, must-revalidate
