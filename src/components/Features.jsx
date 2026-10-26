@@ -20,7 +20,7 @@ export default function Features() {
     {
       icon: <Glasses className="w-6 h-6 text-pix-violet" />,
       title: "Mesa de Props & Accesorios",
-      description: "Sombreros, lentes gigantes, letreros con frases divertidas, boas y props temáticos para todas las edades.",
+      description: "Sombreros, lentes, máscaras, diademas y muchos props más para todas las edades.",
       border: "hover:border-pix-purple/50",
       glow: "group-hover:shadow-neon-purple"
     },
