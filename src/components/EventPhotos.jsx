@@ -1,6 +1,6 @@
 import React from 'react';
 import { Camera } from 'lucide-react';
-import { GALLERY_ITEMS } from '../data/content';
+import { EVENT_PHOTOS } from '../data/content';
 
 export default function EventPhotos() {
   return (
@@ -20,14 +20,17 @@ export default function EventPhotos() {
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4">
-          {GALLERY_ITEMS.map((item) => (
+          {EVENT_PHOTOS.map((item) => (
             <figure
               key={item.id}
               className="relative overflow-hidden rounded-2xl border border-white/10 bg-slate-900 aspect-[4/5] sm:aspect-[4/3]"
             >
               <img
                 src={item.src}
-                alt={item.title}
+                alt={item.alt}
+                width={item.width}
+                height={item.height}
+                loading="lazy"
                 className="h-full w-full object-cover"
               />
               <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-pix-dark via-pix-dark/80 to-transparent px-3 pb-3 pt-10 text-xs sm:text-sm font-semibold text-white">

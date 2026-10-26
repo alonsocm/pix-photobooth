@@ -27,14 +27,14 @@ export default function Gallery() {
           </p>
         </div>
 
-        {/* Filter buttons */}
+        {/* Filter buttons. Hide a tab only when this list has no photos for it. */}
         <div className="flex flex-wrap items-center justify-center gap-2.5 mb-12">
           {[
             { id: 'all', label: 'Todos los Momentos' },
             { id: 'booth', label: 'Cabina Inflable & Montaje' },
             { id: 'strips', label: 'Tiras & Diseños' },
             { id: 'events', label: 'Invitados & Props' }
-          ].map((filter) => (
+          ].filter((filter) => filter.id === 'all' || GALLERY_ITEMS.some((item) => item.category === filter.id)).map((filter) => (
             <button
               key={filter.id}
               onClick={() => setActiveFilter(filter.id)}
@@ -59,7 +59,10 @@ export default function Gallery() {
               <div className="aspect-[4/3] overflow-hidden bg-slate-900">
                 <img
                   src={item.src}
-                  alt={item.title}
+                  alt={item.alt}
+                  width={item.width}
+                  height={item.height}
+                  loading="lazy"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
               </div>
