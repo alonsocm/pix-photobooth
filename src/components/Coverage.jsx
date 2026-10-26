@@ -24,7 +24,7 @@ export default function Coverage() {
               </h2>
 
               <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-                Nos encargamos del traslado, montaje profesional y desmontaje sin que te preocupes por nada. Llegamos con <strong>1 hora de anticipación</strong> para tener todo listo antes de que lleguen tus primeros invitados.
+                Nos encargamos del traslado, montaje profesional y desmontaje sin que te preocupes por nada. Llegamos con <strong>anticipación</strong> para tener todo listo antes de que lleguen tus primeros invitados.
               </p>
 
               {/* Coverage tags */}
