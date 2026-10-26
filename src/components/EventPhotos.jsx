@@ -27,7 +27,10 @@ export default function EventPhotos() {
             >
               <img
                 src={item.src}
-                alt={item.title}
+                alt={item.alt}
+                width={item.width}
+                height={item.height}
+                loading="lazy"
                 className="h-full w-full object-cover"
               />
               <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-pix-dark via-pix-dark/80 to-transparent px-3 pb-3 pt-10 text-xs sm:text-sm font-semibold text-white">
